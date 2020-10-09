@@ -32,8 +32,9 @@ class MyGdxGame : ApplicationAdapter() {
         sampleMusic.play()
         println("Music play!")
 
+        com.badlogic.gdx.graphics.g2d.SpriteBatch.createDefaultShader()
         //when I remove the comment of line 14, an error appears
-//        batch = SpriteBatch()
+        batch = SpriteBatch()
 //        img = Texture(Gdx.files.internal("badlog" +
 //                "ic.jpg"))
     }

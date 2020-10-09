@@ -8,7 +8,7 @@ import java.nio.IntBuffer
 
 class BytecoderGL20(val delegate: WebGLRenderingContext) : GL20 {
     override fun glUniform3i(location: Int, x: Int, y: Int, z: Int) {
-        TODO("Not yet implemented")
+        delegate.uniform3i(location, x, y, z)
     }
 
     override fun glLineWidth(width: Float) {
@@ -448,11 +448,11 @@ class BytecoderGL20(val delegate: WebGLRenderingContext) : GL20 {
     }
 
     override fun glVertexAttribPointer(indx: Int, size: Int, type: Int, normalized: Boolean, stride: Int, ptr: Buffer?) {
-        TODO("Not yet implemented")
+        delegate.vertexAttribPointer(indx, size, type, normalized, stride, ptr)
     }
 
     override fun glVertexAttribPointer(indx: Int, size: Int, type: Int, normalized: Boolean, stride: Int, ptr: Int) {
-        TODO("Not yet implemented")
+        delegate.vertexAttribPointer(indx, size, type, normalized, stride, ptr)
     }
 
     override fun glStencilMaskSeparate(face: Int, mask: Int) {
