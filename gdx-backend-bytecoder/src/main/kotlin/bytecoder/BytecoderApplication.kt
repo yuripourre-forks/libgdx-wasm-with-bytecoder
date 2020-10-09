@@ -17,12 +17,14 @@ class BytecoderApplication(listener: ApplicationListener, libgdxAppCanvas: Libgd
         Gdx.gl = bytecoderGL20
         println("Init gl20")
         Gdx.gl20 = bytecoderGL20
+
+        println("Before Gdx.graphics")
+        Gdx.graphics = BytecoderGraphics()
+
         println("Init audio")
         Gdx.audio = BytecoderAudio(libgdxAppCanvas)
         println("Before Gdx.files")
         Gdx.files = BytecoderFiles()
-        println("Before Gdx.graphics")
-//        Gdx.graphics =
 
         listener.create()
         println("created")
